@@ -1,0 +1,46 @@
+﻿{% extends "base.html" %}
+
+{% block title %}
+Predictive Nfl Matrix
+{% endblock %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nfl Value</th>
+            <th scope="col">{{ user_nfl }} pg/ml</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Probability of Stroke Diagnosis</th>
+            <td>{{ value[0] }}%</td>
+        </tr>
+        <tr>
+            <th scope="row">Likelihood Ratio of a Stroke Diagnosis</th>
+            <td>{{ value[1] }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Interpretation of Likelihood Ratio</th>
+            <td>{{ value[5] }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Probability of Subject Being in Acute Time Window (0-7 days after stroke)</th>
+            <td>{{ value[2] }}%</td>
+        </tr>
+        <tr>
+            <th scope="row">Probability of Subject Being in Subacute Time Window (8-90 days after stroke)</th>
+            <td>{{ value[3] }}%</td>
+        </tr>
+        <tr>
+            <th scope="row">Probability of Subject Being in Chronic Time Window (90+ days after stroke)</th>
+            <td>{{ value[4] }}%</td>
+        </tr>
+    </tbody>
+</table>
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~davischongs/12.embed"></iframe>
+{% endblock %}
+
+

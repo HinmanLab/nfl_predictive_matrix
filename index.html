@@ -1,0 +1,22 @@
+﻿{% extends "base.html" %}
+
+{% block title %}
+Nfl Predictive Matrix Query
+{% endblock %}
+
+{% block content %}
+<body>
+    <div style="max-width:1600px; margin-left:10px; margin-right:10px; word-wrap:break-word; text-align:justify">
+        <p>
+            This website provides an interactive tool designed to use serum or plasma measures of neurofilament light chain in patients with cerebrovascular disease to predict the likelihood of a stroke diagnosis and the probability of the timing of their stroke based on the biomarker level.
+        </p>
+        <p>
+            In Sanchez et al. (2021), we developed a composite data set of all available studies using serum or plasma neurofilament light chain as a biomarker for patients with acute stroke and/or chronic cerebrovascular disease. The composite dataset is available as Supplementary data associated with Sanchez et al. while the contributing studies are available as pdf by visiting: <a>osf.io/j469n</a>
+        </p>
+        <p>
+            To use the interactive tool, input a measured serum or plasma values of neurofilament light chain from a patient or research subject measured using the Quanterix&reg; SIMOA platform. Please note, the range is limited from 5 pg/mL to 5000 pg/mL. Measured values above 5000 pg/mL should be entered as 5000 as the results will not vary above this upper limit threshold. The output will include the probability of a stroke diagnosis as well as a likelihood ratio for a stroke diagnosis. Patients/subjects with TIA may also have elevated serum/plasma neurofilament light chain values however this model cannot reliably distinguish stroke vs. TIA. This is an unvalidated research tool, clinical judgement should be utilized at all times.
+        </p>
+    </div>
+</body>
+{% endblock %}
+
